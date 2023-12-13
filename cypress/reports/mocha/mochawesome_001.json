@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-12-13T05:38:06.245Z",
+    "end": "2023-12-13T05:38:06.660Z",
+    "duration": 415,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "38ead0e5-ebdc-4933-b683-fab338ef3458",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\dummyRestAPI\\getAllEmployees.cy.js",
+      "file": "cypress\\e2e\\tests\\dummyRestAPI\\getAllEmployees.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a8d0e03c-2522-4c6e-a411-510b6933de5c",
+          "title": "Dummy examples Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get all employees",
+              "fullTitle": "Dummy examples Api tests Get all employees",
+              "timedOut": null,
+              "duration": 384,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"https://dummy.restapiexample.com/api/v1/employees\",\n  failOnStatusCode: false\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.data[0].id).to.eq(1);\n  expect(data.data[0].employee_name).to.eq(\"Tiger Nixon\");\n  expect(data.data[0].employee_age).to.eq(61);\n  expect(data.data[0].profile_image).to.eq(\"\");\n});",
+              "err": {},
+              "uuid": "32d18c14-2437-43f3-9e23-e4af95d05285",
+              "parentUUID": "a8d0e03c-2522-4c6e-a411-510b6933de5c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "32d18c14-2437-43f3-9e23-e4af95d05285"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 384,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

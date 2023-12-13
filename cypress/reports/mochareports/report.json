@@ -1,0 +1,1209 @@
+{
+  "stats": {
+    "suites": 20,
+    "tests": 20,
+    "passes": 20,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 20,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2023-12-13T05:38:01.001Z",
+    "end": "2023-12-13T05:47:29.073Z",
+    "duration": 568072
+  },
+  "results": [
+    {
+      "uuid": "38ead0e5-ebdc-4933-b683-fab338ef3458",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\dummyRestAPI\\getAllEmployees.cy.js",
+      "file": "cypress\\e2e\\tests\\dummyRestAPI\\getAllEmployees.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a8d0e03c-2522-4c6e-a411-510b6933de5c",
+          "title": "Dummy examples Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get all employees",
+              "fullTitle": "Dummy examples Api tests Get all employees",
+              "timedOut": null,
+              "duration": 384,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"https://dummy.restapiexample.com/api/v1/employees\",\n  failOnStatusCode: false\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.data[0].id).to.eq(1);\n  expect(data.data[0].employee_name).to.eq(\"Tiger Nixon\");\n  expect(data.data[0].employee_age).to.eq(61);\n  expect(data.data[0].profile_image).to.eq(\"\");\n});",
+              "err": {},
+              "uuid": "32d18c14-2437-43f3-9e23-e4af95d05285",
+              "parentUUID": "a8d0e03c-2522-4c6e-a411-510b6933de5c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "32d18c14-2437-43f3-9e23-e4af95d05285"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 384,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "dfb2d9d3-4131-4229-89be-8a7e67e06a2a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\dummyRestAPI\\getOneEmployee.cy.js",
+      "file": "cypress\\e2e\\tests\\dummyRestAPI\\getOneEmployee.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7e48ee16-c815-45f8-9f0c-17353c740aca",
+          "title": "Dummy examples get one employee",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get one employee",
+              "fullTitle": "Dummy examples get one employee Get one employee",
+              "timedOut": null,
+              "duration": 374,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"https://dummy.restapiexample.com/api/v1/employee/1\",\n  failOnStatusCode: false\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.data.id).to.eq(1);\n  expect(data.data.employee_name).to.eq(\"Tiger Nixon\");\n  expect(data.data.employee_age).to.eq(61);\n  expect(data.data.profile_image).to.eq(\"\");\n  expect(data.data.employee_salary).to.eq(320800);\n});",
+              "err": {},
+              "uuid": "4e375932-a35c-4590-b609-2678160df483",
+              "parentUUID": "7e48ee16-c815-45f8-9f0c-17353c740aca",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4e375932-a35c-4590-b609-2678160df483"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 374,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "7b60e31c-55b8-41bc-999e-e432bddbf02a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\dummyRestAPI\\postToDb.cy.js",
+      "file": "cypress\\e2e\\tests\\dummyRestAPI\\postToDb.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4a334265-5bd1-45fa-914c-7754d70fbda2",
+          "title": "Dummy examples post to DB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Post to Db",
+              "fullTitle": "Dummy examples post to DB Post to Db",
+              "timedOut": null,
+              "duration": 1883,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://dummy.restapiexample.com/api/v1/create\",\n  failOnStatusCode: false,\n  body: {\n    name: \"test\",\n    salary: \"123\",\n    age: \"23\"\n  }\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.data.name).to.eq(\"test\");\n  expect(data.data.salary).to.eq(\"123\");\n  expect(data.data.age).to.eq(\"23\");\n});",
+              "err": {},
+              "uuid": "a9905388-a450-43c5-aa00-fbc78f6b2a4a",
+              "parentUUID": "4a334265-5bd1-45fa-914c-7754d70fbda2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a9905388-a450-43c5-aa00-fbc78f6b2a4a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1883,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "add26c39-de2d-402e-8ae0-4de38b71448f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\dummyRestAPI\\putToEmployeeRecord.cy.js",
+      "file": "cypress\\e2e\\tests\\dummyRestAPI\\putToEmployeeRecord.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3392836d-d444-49e9-966e-5ddc00dd0662",
+          "title": "Dummy examples put to DB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Put to Db update an employee record",
+              "fullTitle": "Dummy examples put to DB Put to Db update an employee record",
+              "timedOut": null,
+              "duration": 960,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"PUT\",\n  url: \"https://dummy.restapiexample.com/api/v1/update/21\",\n  failOnStatusCode: false,\n  body: {\n    name: \"Dalibor\",\n    salary: \"24000\",\n    age: \"39\"\n  }\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.data.name).to.eq(\"Dalibor\");\n  expect(data.data.salary).to.eq(\"24000\");\n  expect(data.data.age).to.eq(\"39\");\n});",
+              "err": {},
+              "uuid": "04880307-aa5e-4c2c-8afd-b8da29f9aa7c",
+              "parentUUID": "3392836d-d444-49e9-966e-5ddc00dd0662",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "04880307-aa5e-4c2c-8afd-b8da29f9aa7c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 960,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "feaaefe8-104f-4154-a79c-3e2add38a53f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\deleteReq.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\deleteReq.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1c11b480-b2ee-45fe-8e2e-d8e0230ed960",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Put and update a user",
+              "fullTitle": "ReqRes Api tests Put and update a user",
+              "timedOut": null,
+              "duration": 1934,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"DELETE\",\n  url: \"https://reqres.in/api/users/2\",\n  failOnStatusCode: false\n}).then(response => {\n  // cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(response.status).to.eq(204);\n});",
+              "err": {},
+              "uuid": "6830b745-888a-4cce-ab26-085193fc5fed",
+              "parentUUID": "1c11b480-b2ee-45fe-8e2e-d8e0230ed960",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6830b745-888a-4cce-ab26-085193fc5fed"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1934,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "39ed0704-3bf3-4867-af1a-1e9d578a278c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\getDelayedresponse.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\getDelayedresponse.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "067119a0-dd72-4a5a-b66b-088c991bc084",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get all users",
+              "fullTitle": "ReqRes Api tests Get all users",
+              "timedOut": null,
+              "duration": 3442,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"https://reqres.in/api/users?delay=3\",\n  failOnStatusCode: false\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(response.status).to.eq(200);\n  expect(data.data[0].id).to.eq(1);\n  expect(data.data[0].email).to.eq(\"george.bluth@reqres.in\");\n  expect(data.data[0].first_name).to.eq(\"George\");\n  expect(data.data[0].last_name).to.eq(\"Bluth\");\n  expect(data.data[0].avatar).to.eq(\"https://reqres.in/img/faces/1-image.jpg\");\n});",
+              "err": {},
+              "uuid": "5d54d090-0c51-4c0d-a3d7-1b0805bed98a",
+              "parentUUID": "067119a0-dd72-4a5a-b66b-088c991bc084",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5d54d090-0c51-4c0d-a3d7-1b0805bed98a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3442,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "58c9762d-a915-4a38-8363-0621e82aaff7",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\getListOfUsers.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\getListOfUsers.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8c2e6575-5106-46ea-97c5-0c4a3a9bcc4a",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get all users",
+              "fullTitle": "ReqRes Api tests Get all users",
+              "timedOut": null,
+              "duration": 474,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"https://reqres.in/api/users?page=2\",\n  failOnStatusCode: false\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.data[0].id).to.eq(7);\n  expect(data.data[0].email).to.eq(\"michael.lawson@reqres.in\");\n  expect(data.data[0].first_name).to.eq(\"Michael\");\n  expect(data.data[0].last_name).to.eq(\"Lawson\");\n  expect(data.data[0].avatar).to.eq(\"https://reqres.in/img/faces/7-image.jpg\");\n});",
+              "err": {},
+              "uuid": "6ce83207-b723-48bf-9438-3d14835780fb",
+              "parentUUID": "8c2e6575-5106-46ea-97c5-0c4a3a9bcc4a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6ce83207-b723-48bf-9438-3d14835780fb"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 474,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "79e0c8a3-96f0-4b17-863d-968248f7a65e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\getListResource.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\getListResource.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0111205c-69e7-45d6-bb93-9b926a667737",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get list of resources",
+              "fullTitle": "ReqRes Api tests Get list of resources",
+              "timedOut": null,
+              "duration": 450,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"https://reqres.in/api/unknown\",\n  failOnStatusCode: false\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.data[0].id).to.eq(1);\n  expect(data.data[0].name).to.eq(\"cerulean\");\n  expect(data.data[0].year).to.eq(2000);\n  expect(data.data[0].color).to.eq(\"#98B2D1\");\n  expect(data.data[0].pantone_value).to.eq(\"15-4020\");\n});",
+              "err": {},
+              "uuid": "beae8e91-42b8-4536-bf67-75a7ee3bc58a",
+              "parentUUID": "0111205c-69e7-45d6-bb93-9b926a667737",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "beae8e91-42b8-4536-bf67-75a7ee3bc58a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 450,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "199c4147-c626-4e83-923c-cb8088d6c4a2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\getSingleResorceNF.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\getSingleResorceNF.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3b6c020b-41a1-48df-af0d-702860deb3f0",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Single resource not found",
+              "fullTitle": "ReqRes Api tests Single resource not found",
+              "timedOut": null,
+              "duration": 443,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"https://reqres.in/api/unknown/23\",\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.status).to.eq(404);\n});",
+              "err": {},
+              "uuid": "e2d33c51-2d16-41bb-85ed-edfd70c9a298",
+              "parentUUID": "3b6c020b-41a1-48df-af0d-702860deb3f0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e2d33c51-2d16-41bb-85ed-edfd70c9a298"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 443,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "296e9c41-591c-4d30-b2af-e2391e1295f2",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\getSingleResource.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\getSingleResource.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7b27adf2-ecee-4089-a1b1-0d7c2d774e1c",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get single resource",
+              "fullTitle": "ReqRes Api tests Get single resource",
+              "timedOut": null,
+              "duration": 450,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"https://reqres.in/api/unknown/2\",\n  failOnStatusCode: false\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.data.id).to.eq(2);\n  expect(data.data.name).to.eq(\"fuchsia rose\");\n  expect(data.data.year).to.eq(2001);\n  expect(data.data.color).to.eq(\"#C74375\");\n  expect(data.data.pantone_value).to.eq(\"17-2031\");\n});",
+              "err": {},
+              "uuid": "91d90ded-64c4-4c9e-ae1b-263012b40d02",
+              "parentUUID": "7b27adf2-ecee-4089-a1b1-0d7c2d774e1c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "91d90ded-64c4-4c9e-ae1b-263012b40d02"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 450,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "7699df96-84a1-4266-8018-6ea50a856e80",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\getSingleUser.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\getSingleUser.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c575c50e-8bc3-4fe8-b866-b028ecac74fd",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Get one user",
+              "fullTitle": "ReqRes Api tests Get one user",
+              "timedOut": null,
+              "duration": 447,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"https://reqres.in/api/users/2\",\n  failOnStatusCode: false\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.data.email).to.eq(\"janet.weaver@reqres.in\");\n  expect(data.data.first_name).to.eq(\"Janet\");\n  expect(data.data.last_name).to.eq(\"Weaver\");\n  expect(data.data.avatar).to.eq(\"https://reqres.in/img/faces/2-image.jpg\");\n});",
+              "err": {},
+              "uuid": "68ebd487-b002-4487-80f0-963ef2c569a1",
+              "parentUUID": "c575c50e-8bc3-4fe8-b866-b028ecac74fd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "68ebd487-b002-4487-80f0-963ef2c569a1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 447,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "723fe254-751a-446a-9955-1cba7192986e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\getUserNotFound.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\getUserNotFound.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0151a51b-8b8b-4e4a-b69b-0d19d3ac0020",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User not found",
+              "fullTitle": "ReqRes Api tests User not found",
+              "timedOut": null,
+              "duration": 427,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"GET\",\n  url: \"https://reqres.in/api/users/23\",\n  failOnStatusCode: false\n}).then(response => {\n  expect(response.status).to.eq(404);\n});",
+              "err": {},
+              "uuid": "4c5cacc2-42fa-4be6-8260-f54f97483874",
+              "parentUUID": "0151a51b-8b8b-4e4a-b69b-0d19d3ac0020",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4c5cacc2-42fa-4be6-8260-f54f97483874"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 427,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "d0b7c0a8-c3b1-4a71-b85a-c8db2cd40613",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\patchUpdate.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\patchUpdate.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8b959156-7b2f-4278-9289-21226a3119e2",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Patch and update a user",
+              "fullTitle": "ReqRes Api tests Patch and update a user",
+              "timedOut": null,
+              "duration": 436,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"PATCH\",\n  url: \"https://reqres.in/api/users/2\",\n  failOnStatusCode: false,\n  body: {\n    name: \"morpheus\",\n    job: \"zion resident\"\n  }\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.name).to.eq(\"morpheus\");\n  expect(data.job).to.eq(\"zion resident\");\n  expect(response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "27c561db-4e05-40c1-9211-bd410fa54a8f",
+              "parentUUID": "8b959156-7b2f-4278-9289-21226a3119e2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "27c561db-4e05-40c1-9211-bd410fa54a8f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 436,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "933784f6-3a0d-424c-8294-c4223c0b4381",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\postCreate.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\postCreate.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d01b9d60-ea62-466b-b32f-638823e49a1e",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST and create a user",
+              "fullTitle": "ReqRes Api tests POST and create a user",
+              "timedOut": null,
+              "duration": 454,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://reqres.in/api/users\",\n  failOnStatusCode: false,\n  body: {\n    name: \"morpheus\",\n    job: \"leader\"\n  }\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.name).to.eq(\"morpheus\");\n  expect(data.job).to.eq(\"leader\");\n  expect(response.status).to.eq(201);\n});",
+              "err": {},
+              "uuid": "ff82a0cf-8ec7-4dd0-bc1e-fb2f6deae0e2",
+              "parentUUID": "d01b9d60-ea62-466b-b32f-638823e49a1e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ff82a0cf-8ec7-4dd0-bc1e-fb2f6deae0e2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 454,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "cf10df4e-7135-4cc7-99cf-7f4d8dbfb2e3",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\postLogInSuccessful.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\postLogInSuccessful.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bba5f125-2299-4109-b9a8-9ea6c8a91358",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST and Login successfully",
+              "fullTitle": "ReqRes Api tests POST and Login successfully",
+              "timedOut": null,
+              "duration": 429,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://reqres.in/api/login\",\n  failOnStatusCode: false,\n  body: {\n    email: \"eve.holt@reqres.in\",\n    password: \"cityslicka\"\n  }\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.token).to.eq(\"QpwL5tke4Pnpja7X4\");\n  expect(response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "aa82c012-f934-460f-bdcb-9d1490e47298",
+              "parentUUID": "bba5f125-2299-4109-b9a8-9ea6c8a91358",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "aa82c012-f934-460f-bdcb-9d1490e47298"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 429,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "c596fb58-2f21-4ae1-87fa-14a0ea5102ff",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\postLogInUnsuccessfull.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\postLogInUnsuccessfull.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "389880cf-54ac-4669-8abf-ab70870c7a1a",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST and Login Unsuccessfully",
+              "fullTitle": "ReqRes Api tests POST and Login Unsuccessfully",
+              "timedOut": null,
+              "duration": 437,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://reqres.in/api/login\",\n  failOnStatusCode: false,\n  body: {\n    email: \"peter@klaven\"\n  }\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.error).to.eq(\"Missing password\");\n  expect(response.status).to.eq(400);\n});",
+              "err": {},
+              "uuid": "d358dacd-a1cf-4fc8-95e2-db7ec86437c2",
+              "parentUUID": "389880cf-54ac-4669-8abf-ab70870c7a1a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d358dacd-a1cf-4fc8-95e2-db7ec86437c2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 437,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "8aef5fab-9547-4989-8867-5171e916927c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\postRegister.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\postRegister.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "92c9e55c-6ca2-4249-9a2b-fce1c440ee07",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST and Register a user",
+              "fullTitle": "ReqRes Api tests POST and Register a user",
+              "timedOut": null,
+              "duration": 456,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://reqres.in/api/register\",\n  failOnStatusCode: false,\n  body: {\n    email: \"eve.holt@reqres.in\",\n    password: \"pistol\"\n  }\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.id).to.eq(4);\n  expect(data.token).to.eq(\"QpwL5tke4Pnpja7X4\");\n  expect(response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "f14609da-150d-42dd-96f6-d77d2a1a0c66",
+              "parentUUID": "92c9e55c-6ca2-4249-9a2b-fce1c440ee07",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f14609da-150d-42dd-96f6-d77d2a1a0c66"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 456,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "83263c47-1740-461b-9615-42c615101e2a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\postRegisterUnsuccessful.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\postRegisterUnsuccessful.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "11740c16-d8db-4e4e-afc0-ee705c62e1fe",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST and Register unsuccessfully",
+              "fullTitle": "ReqRes Api tests POST and Register unsuccessfully",
+              "timedOut": null,
+              "duration": 438,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://reqres.in/api/register\",\n  failOnStatusCode: false,\n  body: {\n    email: \"sydney@fife\"\n  }\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.error).to.eq(\"Missing password\");\n  expect(response.status).to.eq(400);\n});",
+              "err": {},
+              "uuid": "c6420106-eb29-4421-88a4-c705bfd73fca",
+              "parentUUID": "11740c16-d8db-4e4e-afc0-ee705c62e1fe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c6420106-eb29-4421-88a4-c705bfd73fca"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 438,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "845063f7-9320-4be9-a1e4-864dd00b426f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\reqresApiTests\\putUpdate.cy.js",
+      "file": "cypress\\e2e\\tests\\reqresApiTests\\putUpdate.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "74e8d0be-7be4-4d58-b088-2f8e0918b0ff",
+          "title": "ReqRes Api tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Put and update a user",
+              "fullTitle": "ReqRes Api tests Put and update a user",
+              "timedOut": null,
+              "duration": 437,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"POST\",\n  url: \"https://reqres.in/api/users/2\",\n  failOnStatusCode: false,\n  body: {\n    name: \"morpheus\",\n    job: \"zion resident\"\n  }\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.name).to.eq(\"morpheus\");\n  expect(data.job).to.eq(\"zion resident\");\n  expect(response.status).to.eq(201);\n});",
+              "err": {},
+              "uuid": "c1c6a7ad-f029-4d6b-8881-71a85180fc1b",
+              "parentUUID": "74e8d0be-7be4-4d58-b088-2f8e0918b0ff",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c1c6a7ad-f029-4d6b-8881-71a85180fc1b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 437,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "4c36c828-2bff-4acb-bf85-0b42b107735b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\dummyRestAPI\\deleteAnEmployee.cy.js",
+      "file": "cypress\\e2e\\tests\\dummyRestAPI\\deleteAnEmployee.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "261c777b-6d10-4638-8b4d-14463214f857",
+          "title": "Dummy examples delete from DB",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Delete an employee record",
+              "fullTitle": "Dummy examples delete from DB Delete an employee record",
+              "timedOut": null,
+              "duration": 2514,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: \"DELETE\",\n  url: \"https://dummy.restapiexample.com/api/v1/delete/2\",\n  failOnStatusCode: false\n}).then(response => {\n  cy.log(JSON.stringify(response.body));\n  const data = response.body;\n  expect(data.message).to.eq(\"Successfully! Record has been deleted\");\n  expect(data.status).to.eq(\"success\");\n});",
+              "err": {},
+              "uuid": "9fdd2d40-f4ca-45f5-8f88-1c0dd17a0a60",
+              "parentUUID": "261c777b-6d10-4638-8b4d-14463214f857",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9fdd2d40-f4ca-45f5-8f88-1c0dd17a0a60"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2514,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
